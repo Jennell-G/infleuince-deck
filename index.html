@@ -1,425 +1,443 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infleuince: Investor Pitch Deck</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        .slide {
-            display: none;
-            min-height: 80vh;
-        }
-        .slide.active {
-            display: flex;
-        }
-        .fade-in {
-            animation: fadeIn 0.8s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .gradient-text {
-            background: linear-gradient(to right, #8B5CF6, #EC4899);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .mockup-window {
-            animation: float 4s ease-in-out infinite;
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infleuince: Investor Pitch Deck</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .slide {
+            display: none;
+            min-height: 80vh;
+        }
+        .slide.active {
+            display: flex;
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #8B5CF6, #EC4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .mockup-window {
+            animation: float 4s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
 </head>
 <body class="bg-gray-900 text-white flex flex-col items-center justify-center min-h-screen p-4">
 
-    <div class="w-full max-w-5xl mx-auto bg-gray-800 border border-gray-700 rounded-2xl shadow-2xl overflow-hidden">
-        <!-- Progress Bar -->
-        <div class="w-full bg-gray-700 h-2">
-            <div id="progressBar" class="bg-gradient-to-r from-purple-500 to-pink-500 h-2 transition-all duration-300" style="width: 10%;"></div>
-        </div>
+    <div class="w-full max-w-5xl mx-auto bg-gray-800 border border-gray-700 rounded-2xl shadow-2xl overflow-hidden">
+                <div class="w-full bg-gray-700 h-2">
+            <div id="progressBar" class="bg-gradient-to-r from-purple-500 to-pink-500 h-2 transition-all duration-300" style="width: 10%;"></div>
+        </div>
 
-        <div class="p-8 md:p-12 relative">
-            <!-- Slides Container -->
-            <div id="slidesContainer">
+        <div class="p-8 md:p-12 relative">
+                        <div id="slidesContainer">
 
-                <!-- Slide 1: Title -->
-                <div class="slide active fade-in flex-col items-center justify-center text-center">
-                    <h1 class="text-6xl md:text-8xl font-extrabold gradient-text mb-4">Infleuince</h1>
-                    <p class="text-xl md:text-2xl text-gray-300">The Intelligent Social Media Studio</p>
-                    <p class="mt-8 text-gray-400">An Investor Presentation</p>
-                </div>
+                                <div class="slide active fade-in flex-col items-center justify-center text-center">
+                    <h1 class="text-6xl md:text-8xl font-extrabold gradient-text mb-4">Infleuince</h1>
+                    <p class="text-xl md:text-2xl text-gray-300">The Intelligent Social Media Studio</p>
+                    <p class="mt-8 text-gray-400">An Investor Presentation</p>
+                </div>
 
-                <!-- Slide 2: The Opportunity -->
-                <div class="slide fade-in flex-col lg:flex-row items-center justify-between">
-                    <div class="lg:w-1/2 mb-8 lg:mb-0">
-                        <h2 class="text-4xl md:text-5xl font-bold mb-4">The Opportunity</h2>
-                        <p class="text-lg text-gray-300 mb-6">The social media management market is experiencing explosive growth. We are positioned to capture a significant share by addressing a critical market gap.</p>
-                        <div class="flex space-x-6 text-center">
-                            <div>
-                                <p class="text-4xl font-bold gradient-text">$27B</p>
-                                <p class="text-gray-400">Current Market</p>
-                            </div>
-                            <div>
-                                <p class="text-4xl font-bold gradient-text">$124B</p>
-                                <p class="text-gray-400">Projected by 2032</p>
-                            </div>
-                        </div>
-                         <p class="text-xs text-gray-500 mt-4">*Source: Fortune Business Insights</p>
-                    </div>
-                    <div class="lg:w-1/2 flex items-center justify-center">
-                         <canvas id="marketChart" width="400" height="400"></canvas>
-                    </div>
-                </div>
-                
-                <!-- Slide 3: Why Now? -->
-                <div class="slide fade-in flex-col items-center justify-center text-center">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-8">Why Now? The Perfect Storm</h2>
-                    <div class="grid md:grid-cols-3 gap-8 w-full">
-                        <div class="bg-gray-700 p-6 rounded-xl border border-gray-600">
-                             <h3 class="text-xl font-semibold mb-2 text-purple-400">API Disruption</h3>
-                            <p class="text-gray-300">Recent Instagram API changes level the playing field, allowing agile startups to outmaneuver incumbents stuck with legacy code.</p>
-                        </div>
-                        <div class="bg-gray-700 p-6 rounded-xl border border-gray-600">
-                            <h3 class="text-xl font-semibold mb-2 text-pink-400">AI Maturity</h3>
-                            <p class="text-gray-300">Generative AI like Claude is now powerful enough to move beyond simple templates to true, high-quality content automation.</p>
-                        </div>
-                        <div class="bg-gray-700 p-6 rounded-xl border border-gray-600">
-                             <h3 class="text-xl font-semibold mb-2 text-purple-400">Creator Economy Boom</h3>
-                            <p class="text-gray-300">The number of professional solopreneurs and creators needing powerful, efficient tools is at an all-time high.</p>
-                        </div>
-                    </div>
-                </div>
+                                <div class="slide fade-in flex-col lg:flex-row items-center justify-between">
+                    <div class="lg:w-1/2 mb-8 lg:mb-0">
+                        <h2 class="text-4xl md:text-5xl font-bold mb-4">The Opportunity</h2>
+                        <p class="text-lg text-gray-300 mb-6">The social media management market is experiencing explosive growth. We are positioned to capture a significant share by addressing a critical market gap.</p>
+                        <div class="flex space-x-6 text-center">
+                            <div>
+                                <p class="text-4xl font-bold gradient-text">$27B</p>
+                            </div>
+                            <div>
+                                <p class="text-4xl font-bold gradient-text">$124B</p>
+                                <p class="text-gray-400">Projected by 2032</p>
+                            </div>
+                        </div>
+                         <p class="text-xs text-gray-500 mt-4">*Source: Fortune Business Insights</p>
+                    </div>
+                    <div class="lg:w-1/2 flex items-center justify-center">
+                         <canvas id="marketChart" width="400" height="400"></canvas>
+                    </div>
+                </div>
+                
+                                <div class="slide fade-in flex-col items-center justify-center text-center">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-8">Why Now? The Perfect Storm</h2>
+                    <div class="grid md:grid-cols-3 gap-8 w-full">
+                        <div class="bg-gray-700 p-6 rounded-xl border border-gray-600">
+                             <h3 class="text-xl font-semibold mb-2 text-purple-400">API Disruption</h3>
+                            <p class="text-gray-300">Recent Instagram API changes level the playing field, allowing agile startups to outmaneuver incumbents stuck with legacy code.</p>
+                        </div>
+                        <div class="bg-gray-700 p-6 rounded-xl border border-gray-600">
+                            <h3 class="text-xl font-semibold mb-2 text-pink-400">AI Maturity</h3>
+                            <p class="text-gray-300">Generative AI is now powerful enough to move beyond simple templates to true, high-quality content automation.</p>
+                        </div>
+                        <div class="bg-gray-700 p-6 rounded-xl border border-gray-600">
+                             <h3 class="text-xl font-semibold mb-2 text-purple-400">Creator Economy Boom</h3>
+                            <p class="text-gray-300">The number of professional solopreneurs and creators needing powerful, efficient tools is at an all-time high.</p>
+                        </div>
+                    </div>
+                </div>
 
-                <!-- Slide 4: The Problem -->
-                <div class="slide fade-in flex-col items-center justify-center text-center">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-8">A Market Divided, A Problem Unsolved</h2>
-                    <div class="grid md:grid-cols-3 gap-8 w-full">
-                        <div class="bg-gray-700 p-6 rounded-xl border border-gray-600">
-                            <h3 class="text-xl font-semibold mb-2">Too Basic</h3>
-                            <p class="text-gray-400">Tools like Buffer & Later are affordable but lack the AI-power creators need to truly scale.</p>
-                        </div>
-                        <div class="bg-gradient-to-br from-purple-600 to-pink-600 p-6 rounded-xl border border-purple-500 shadow-lg">
-                            <h3 class="text-2xl font-bold mb-2 text-white">The "Missing Middle"</h3>
-                            <p class="text-purple-100">Professional solopreneurs & SMBs are underserved, needing power without enterprise complexity or cost.</p>
-                        </div>
-                        <div class="bg-gray-700 p-6 rounded-xl border border-gray-600">
-                            <h3 class="text-xl font-semibold mb-2">Too Complex</h3>
-                            <p class="text-gray-400">Enterprise solutions like Hootsuite are powerful but too expensive and complicated for small teams.</p>
-                        </div>
-                    </div>
-                    <p class="mt-8 text-lg text-pink-400 font-semibold">The common thread? Friction. Especially with complex Instagram onboarding.</p>
-                </div>
-                
-                <!-- Slide 5: Competitive Landscape -->
-                <div class="slide fade-in flex-col items-center justify-center">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-8 text-center">Competitive Landscape</h2>
-                    <div class="w-full h-96 bg-gray-700/50 rounded-lg p-4 relative border border-gray-600">
-                        <!-- Axes -->
-                        <div class="absolute bottom-1/2 left-0 w-full h-px bg-gray-500"></div>
-                        <div class="absolute top-0 left-1/2 w-px h-full bg-gray-500"></div>
-                        <!-- Axis Labels -->
-                        <span class="absolute top-2 left-1/2 -translate-x-1/2 text-gray-400 text-sm">More AI Power</span>
-                        <span class="absolute bottom-2 left-1/2 -translate-x-1/2 text-gray-400 text-sm">Less AI Power</span>
-                        <span class="absolute top-1/2 -translate-y-1/2 left-2 text-gray-400 text-sm transform -rotate-90 origin-left">Hard to Use</span>
-                        <span class="absolute top-1/2 -translate-y-1/2 right-2 text-gray-400 text-sm transform rotate-90 origin-right">Easy to Use</span>
-                        <!-- Competitors -->
-                        <div class="absolute bottom-4 left-4 text-center">
-                            <div class="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center border-2 border-red-500"><span class="font-bold text-red-300">Buffer</span></div>
-                        </div>
-                        <div class="absolute top-4 left-4 text-center">
-                            <div class="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center border-2 border-blue-500"><span class="font-bold text-blue-300">Hootsuite</span></div>
-                        </div>
-                        <div class="absolute top-8 right-8 text-center">
-                            <div class="w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center border-4 border-purple-400 shadow-2xl">
-                                <span class="font-extrabold text-2xl text-white">Infleuince</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                <div class="slide fade-in flex-col items-center justify-center text-center">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-8">A Market Divided, A Problem Unsolved</h2>
+                    <div class="grid md:grid-cols-3 gap-8 w-full">
+                        <div class="bg-gray-700 p-6 rounded-xl border border-gray-600">
+                            <h3 class="text-xl font-semibold mb-2">Too Basic</h3>
+                            <p class="text-gray-400">Tools like Buffer & Later are affordable but lack the AI-power creators need to truly scale.</p>
+                        </div>
+                        <div class="bg-gradient-to-br from-purple-600 to-pink-600 p-6 rounded-xl border border-purple-500 shadow-lg">
+                            <h3 class="text-2xl font-bold mb-2 text-white">The "Missing Middle"</h3>
+                            <p class="text-purple-100">Professional solopreneurs & SMBs are underserved, needing power without enterprise complexity or cost.</p>
+                        </div>
+                        <div class="bg-gray-700 p-6 rounded-xl border border-gray-600">
+                            <h3 class="text-xl font-semibold mb-2">Too Complex</h3>
+                            <p class="text-gray-400">Enterprise solutions like Hootsuite are powerful but too expensive and complicated for small teams.</p>
+                        </div>
+                    </div>
+                    <p class="mt-8 text-lg text-pink-400 font-semibold">The common thread? Friction. Especially with complex Instagram onboarding.</p>
+                </div>
+                
+                                <div class="slide fade-in flex-col items-center justify-center">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-8 text-center">Competitive Landscape</h2>
+                    <div class="w-full h-96 bg-gray-700/50 rounded-lg p-4 relative border border-gray-600">
+                                                <div class="absolute bottom-1/2 left-0 w-full h-px bg-gray-500"></div>
+                        <div class="absolute top-0 left-1/2 w-px h-full bg-gray-500"></div>
+                                                <span class="absolute top-2 left-1/2 -translate-x-1/2 text-gray-400 text-sm">More AI Power</span>
+                        <span class="absolute bottom-2 left-1/2 -translate-x-1/2 text-gray-400 text-sm">Less AI Power</span>
+                        <span class="absolute top-1/2 -translate-y-1/2 left-2 text-gray-400 text-sm transform -rotate-90 origin-left">Hard to Use</span>
+                        <span class="absolute top-1/2 -translate-y-1/2 right-2 text-gray-400 text-sm transform rotate-90 origin-right">Easy to Use</span>
+                                                <div class="absolute bottom-4 left-4 text-center">
+                            <div class="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center border-2 border-red-500"><span class="font-bold text-red-300">Buffer</span></div>
+                        </div>
+                        <div class="absolute top-4 left-4 text-center">
+                            <div class="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center border-2 border-blue-500"><span class="font-bold text-blue-300">Hootsuite</span></div>
+                        </div>
+                        <div class="absolute top-8 right-8 text-center">
+                            <div class="w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center border-4 border-purple-400 shadow-2xl">
+                                <span class="font-extrabold text-2xl text-white">Infleuince</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
-                <!-- Slide 6: The Solution -->
-                <div class="slide fade-in flex-col items-center justify-center">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-2 text-center">Our Solution: <span class="gradient-text">Infleuince</span></h2>
-                    <p class="text-center text-gray-300 mb-8 max-w-3xl">An intelligent content partner, not just another scheduler. We're built on two revolutionary pillars.</p>
-                    <div class="grid md:grid-cols-2 gap-8 w-full">
-                        <div class="bg-gray-700 p-8 rounded-xl border border-gray-600 transform hover:scale-105 transition-transform duration-300 relative overflow-hidden">
-                            <h3 class="text-2xl font-bold mb-3">1. One-Click Publishing</h3>
-                            <p class="text-gray-300 mb-4">A first-of-its-kind AI orchestrator that generates a complete, multi-platform campaign from a single goal.</p>
-                            <div class="bg-gray-800 rounded-lg p-3 mockup-window">
-                                <p class="text-sm text-gray-400 mb-2">Goal: <span class="text-white">Promote new coffee blend</span></p>
-                                <div class="bg-purple-500 text-white text-sm font-bold text-center py-2 px-4 rounded-md animate-pulse">Generate Campaign</div>
-                            </div>
-                        </div>
-                        <div class="bg-gray-700 p-8 rounded-xl border border-gray-600 transform hover:scale-105 transition-transform duration-300">
-                            <h3 class="text-2xl font-bold mb-3">2. Simplified Onboarding</h3>
-                            <p class="text-gray-300">Launching with the new Instagram Business Login API, we eliminate the #1 user pain point: the need for a Facebook Page. This is our strategic entry wedge.</p>
-                        </div>
-                    </div>
-                </div>
+                                <div class="slide fade-in flex-col items-center justify-center">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-2 text-center">Our Solution: <span class="gradient-text">Infleuince</span></h2>
+                    <p class="text-center text-gray-300 mb-8 max-w-3xl">An intelligent content partner, not just another scheduler. We're built on revolutionary pillars focused on revenue control and efficiency.</p>
+                    <div class="grid md:grid-cols-2 gap-8 w-full">
+                        <div class="bg-gray-700 p-8 rounded-xl border border-gray-600 transform hover:scale-105 transition-transform duration-300 relative overflow-hidden">
+                            <h3 class="text-2xl font-bold mb-3">1. Generative Credit Architecture</h3>
+                            <p class="text-gray-300 mb-4">Solves the #1 cost risk in AI SaaS: **Negative Unit Economics**. Our model ensures price scales with resource consumption (AI Video/Image Gen).</p>
+                            <div class="bg-gray-800 rounded-lg p-3 mockup-window">
+                                <p class="text-sm text-gray-400 mb-2">Usage: <span class="text-white">150 credits (30s Video)</span></p>
+                                <div class="bg-green-500 text-white text-sm font-bold text-center py-2 px-4 rounded-md">Cost Controlled & Transparent</div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-700 p-8 rounded-xl border border-gray-600 transform hover:scale-105 transition-transform duration-300">
+                            <h3 class="text-2xl font-bold mb-3">2. Simplified Onboarding</h3>
+                            <p class="text-gray-300">Launching with the new Instagram Business Login API, we eliminate the #1 user pain point: the need for a Facebook Page.</p>
+                            <p class="text-gray-300 mt-4">We deployed a secure **AI Support Assistant** (JWT verified) and dedicated **Status Page** to reduce friction and overhead.</p>
+                        </div>
+                    </div>
+                </div>
 
-                <!-- Slide 7: Go-to-Market Strategy -->
-                <div class="slide fade-in flex-col items-center justify-center">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-8 text-center">Go-to-Market Strategy</h2>
-                    <div class="w-full">
-                        <div class="relative">
-                            <!-- Timeline Line -->
-                            <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-700 rounded-full"></div>
-                            <!-- Phase 1 -->
-                            <div class="relative mb-8 flex items-center w-full">
-                                <div class="w-1/2 flex justify-end pr-8">
-                                    <div class="bg-gray-700 p-6 rounded-lg border border-gray-600 w-full max-w-sm text-right">
-                                        <h3 class="font-bold text-xl text-purple-400">Phase 1: Foundation</h3>
-                                        <p class="text-sm text-gray-300">(Months 1-3) Content marketing, community engagement, and building our brand presence.</p>
-                                    </div>
-                                </div>
-                                <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-purple-500 rounded-full border-4 border-gray-800"></div>
-                                <div class="w-1/2"></div>
-                            </div>
-                            <!-- Phase 2 -->
-                            <div class="relative mb-8 flex items-center w-full">
-                                <div class="w-1/2"></div>
-                                <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-pink-500 rounded-full border-4 border-gray-800"></div>
-                                <div class="w-1/2 flex justify-start pl-8">
-                                    <div class="bg-gray-700 p-6 rounded-lg border border-gray-600 w-full max-w-sm">
-                                        <h3 class="font-bold text-xl text-pink-400">Phase 2: Initial Traction</h3>
-                                        <p class="text-sm text-gray-300">(Months 4-6) Targeted ad campaigns, influencer outreach, and driving early sign-ups.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Phase 3 -->
-                            <div class="relative flex items-center w-full">
-                                <div class="w-1/2 flex justify-end pr-8">
-                                    <div class="bg-gray-700 p-6 rounded-lg border border-gray-600 w-full max-w-sm text-right">
-                                        <h3 class="font-bold text-xl text-purple-400">Phase 3: Growth & Scaling</h3>
-                                        <p class="text-sm text-gray-300">(Months 7-12) Scaling successful channels, exploring partnerships, and aiming for our MRR goal.</p>
-                                    </div>
-                                </div>
-                                <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-purple-500 rounded-full border-4 border-gray-800"></div>
-                                <div class="w-1/2"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Slide 8: Financials -->
-                <div class="slide fade-in flex-col lg:flex-row items-center justify-between">
-                    <div class="lg:w-2/3 mb-8 lg:mb-0 lg:pr-8">
-                        <h2 class="text-4xl md:text-5xl font-bold mb-4">Financial Projections</h2>
-                        <p class="text-lg text-gray-300 mb-6">Our model is lean and focused on sustainable growth, with a clear target for Year 1.</p>
-                        <div class="h-64"><canvas id="growthChart"></canvas></div>
-                    </div>
-                    <div class="lg:w-1/3 flex flex-col items-center justify-center text-center bg-gray-700/50 p-6 rounded-lg">
-                        <p class="text-2xl font-bold">First-Year Goal</p>
-                        <p class="text-5xl font-extrabold gradient-text my-2">$10,000</p>
-                        <p class="text-xl font-bold">in Monthly Recurring Revenue</p>
-                        <p class="text-gray-400 mt-2">(~345 Pro Subscribers)</p>
-                    </div>
-                </div>
+                                <div class="slide fade-in flex-col items-center justify-center">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-8 text-center">Go-to-Market Strategy</h2>
+                    <div class="w-full">
+                        <div class="relative">
+                                                        <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-700 rounded-full"></div>
+                                  00                     <div class="relative mb-8 flex items-center w-full">
+                                <div class="w-1/2 flex justify-end pr-8">
+                                    <div class="bg-gray-700 p-6 rounded-lg border border-gray-600 w-full max-w-sm text-right">
+                                        <h3 class="font-bold text-xl text-purple-400">Phase 1: Foundation</h3>
+                                        <p class="text-sm text-gray-300">(Months 1-3) Content marketing, community engagement, and building our brand presence.</p>
+                                    </div>
+                                </div>
+                                <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-purple-500 rounded-full border-4 border-gray-800"></div>
+                                <div class="w-1/2"></div>
+                            </div>
+                                                        <div class="relative mb-8 flex items-center w-full">
+                                <div class="w-1/2"></div>
+                                <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-pink-500 rounded-full border-4 border-gray-800"></div>
+                                <div class="w-1/2 flex justify-start pl-8">
+                                    <div class="bg-gray-700 p-6 rounded-lg border border-gray-600 w-full max-w-sm">
+                                        <h3 class="font-bold text-xl text-pink-400">Phase 2: Initial Traction</h3>
+                                        <p class="text-sm text-gray-300">(Months 4-6) Targeted ad campaigns, influencer outreach, and driving early sign-ups.</p>
+                                    </div>
+                                </div>
+                            </div>
+                                                        <div class="relative flex items-center w-full">
+                                <div class="w-1/2 flex justify-end pr-8">
+                                    <div class="bg-gray-700 p-6 rounded-lg border border-gray-600 w-full max-w-sm text-right">
+                                        <h3 class="font-bold text-xl text-purple-400">Phase 3: Growth & Scaling</h3>
+                                        <p class="text-sm text-gray-300">(Months 7-12) Scaling successful channels, exploring partnerships, and aiming for our MRR goal.</p>
+                                    </div>
+                                </div>
+                                <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-purple-500 rounded-full border-4 border-gray-800"></div>
+                                <div class="w-1/2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                                <div class="slide fade-in flex-col lg:flex-row items-center justify-between">
+                    <div class="lg:w-2/3 mb-8 lg:mb-0 lg:pr-8">
+                        <h2 class="text-4xl md:text-5xl font-bold mb-4">Financial Projections</h2>
+                        <p class="text-lg text-gray-300 mb-6">Our model is lean and focused on sustainable growth, with a clear target for Year 1.</p>
+                        <div class="h-64"><canvas id="growthChart"></canvas></div>
+                    </div>
+                    <div class="lg:w-1/3 flex flex-col items-center justify-center text-center bg-gray-700/50 p-6 rounded-lg">
+                        <p class="text-2xl font-bold">First-Year Goal</p>
+                        <p class="text-5xl font-extrabold gradient-text my-2">$10,000</p>
+                        <p class="text-xl font-bold">in Monthly Recurring Revenue</p>
+                        <p class="text-gray-400 mt-2">(~345 Pro Subscribers)</p>
+                    </div>
+                </div>
 
-                <!-- Slide 9: The Ask -->
-                <div class="slide fade-in flex-col lg:flex-row items-center justify-between">
-                    <div class="lg:w-1/2 mb-8 lg:mb-0">
-                        <h2 class="text-4xl md:text-5xl font-bold mb-4">The Ask</h2>
-                        <p class="text-lg text-gray-300 mb-6">We are seeking <span class="text-pink-400 font-bold">$50,000</span> in seed funding to accelerate our growth and hit key milestones over the next 12-18 months.</p>
-                        <ul class="space-y-2 text-gray-300">
-                           <li><span class="font-bold text-purple-400">40%</span> - Product Development</li>
-                           <li><span class="font-bold text-pink-400">35%</span> - Marketing & Sales</li>
-                           <li><span class="font-bold text-purple-400">15%</span> - Operational Costs</li>
-                           <li><span class="font-bold text-pink-400">10%</span> - Legal & Compliance</li>
-                        </ul>
-                    </div>
-                    <div class="lg:w-1/2 flex items-center justify-center">
-                        <canvas id="askChart" width="350" height="350"></canvas>
-                    </div>
-                </div>
+                                <div class="slide fade-in flex-col lg:flex-row items-center justify-between">
+                    <div class="lg:w-1/2 mb-8 lg:mb-0">
+                        <h2 class="text-4xl md:text-5xl font-bold mb-4">The Ask</h2>
+                        <p class="text-lg text-gray-300 mb-6">We are seeking <span class="text-pink-400 font-bold">$50,000</span> in seed funding to accelerate our growth and hit key milestones over the next 12-18 months.</p>
+                        <ul class="space-y-2 text-gray-300">
+                           <li><span class="font-bold text-purple-400">40%</span> - Product Development</li>
+                           <li><span class="font-bold text-pink-400">35%</span> - Marketing & Sales</li>
+                           <li><span class="font-bold text-purple-400">15%</span> - Operational Costs</li>
+                           <li><span class="font-bold text-pink-400">10%</span> - Legal & Compliance</li>
+                        </ul>
+                    </div>
+                    <div class="lg:w-1/2 flex items-center justify-center">
+                        <canvas id="askChart" width="350" height="350"></canvas>
+                    </div>
+                </div>
 
-                <!-- Slide 10: The Team -->
-                <div class="slide fade-in flex-col items-center justify-center text-center">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-8">The Team</h2>
-                    <p class="text-gray-400 mb-8">(Placeholder Section)</p>
-                    <div class="grid md:grid-cols-2 gap-8">
-                        <div class="bg-gray-700 p-6 rounded-xl border border-gray-600">
-                            <h3 class="text-xl font-semibold mb-2">[Founder's Name]</h3>
-                            <p class="text-purple-400 font-medium">Founder & CEO</p>
-                            <p class="text-gray-400 mt-2">Expertise in software development, product management, and marketing.</p>
-                        </div>
-                        <div class="bg-gray-700 p-6 rounded-xl border border-gray-600">
-                            <h3 class="text-xl font-semibold mb-2">[Advisor/Team Member]</h3>
-                            <p class="text-pink-400 font-medium">Advisor</p>
-                            <p class="text-gray-400 mt-2">Proven track record in scaling SaaS startups and strategic growth.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Slide 11: Future Vision -->
-                <div class="slide fade-in flex-col items-center justify-center text-center">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-8">The Future of Infleuince</h2>
-                    <div class="grid md:grid-cols-3 gap-8 w-full">
-                        <div class="bg-gray-700 p-6 rounded-xl border border-gray-600">
-                             <h3 class="text-xl font-semibold mb-2 text-purple-400">Platform Expansion</h3>
-                            <p class="text-gray-300">Seamlessly integrate with LinkedIn, Pinterest, and Reddit to become a true multi-platform hub.</p>
-                        </div>
-                        <div class="bg-gray-700 p-6 rounded-xl border border-gray-600">
-                            <h3 class="text-xl font-semibold mb-2 text-pink-400">Deeper AI Analytics</h3>
-                            <p class="text-gray-300">Move beyond basic metrics to predictive analytics, suggesting the best content and times to post for maximum impact.</p>
-                        </div>
-                        <div class="bg-gray-700 p-6 rounded-xl border border-gray-600">
-                             <h3 class="text-xl font-semibold mb-2 text-purple-400">Creator Hub</h3>
-                            <p class="text-gray-300">Become the central operating system for the creator economy, integrating monetization and collaboration tools.</p>
-                        </div>
-                    </div>
-                </div>
+                                <div class="slide fade-in flex-col items-center justify-center text-center">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-8">The Team</h2>
+                    <p class="text-gray-400 mb-8">Just passionate people with laptops and dreams</p>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-gray-700 p-6 rounded-xl border border-gray-600">
+      00                   <h3 class="text-xl font-semibold mb-2">Jennell G & Team</h3>
+                            <p class="text-purple-400 font-medium">Founder & CEO</p>
+                            <p class="text-gray-400 mt-2">Expertise in software development, product management, and marketing.</p>
+                        </div>
+                        <div class="bg-gray-700 p-6 rounded-xl border border-gray-600">
+                            <h3 class="text-xl font-semibold mb-2">[Advisor/Team Member]</h3>
+                            <p class="text-pink-400 font-medium">Advisor</p>
+                            <p class="text-gray-400 mt-2">Proven track record in scaling SaaS startups and strategic growth.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                                <div class="slide fade-in flex-col items-center justify-center text-center">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-8">The Future of Infleuince</h2>
+                    <div class="grid md:grid-cols-3 gap-8 w-full">
+                        <div class="bg-gray-700 p-6 rounded-xl border border-gray-600">
+                             <h3 class="text-xl font-semibold mb-2 text-purple-400">Platform Expansion</h3>
+                            <p class="text-gray-300">Seamlessly integrate with LinkedIn, Pinterest, and Reddit to become a true multi-platform hub.</p>
+                        </div>
+                        <div class="bg-gray-700 p-6 rounded-xl border border-gray-600">
+                            <h3 class="text-xl font-semibold mb-2 text-pink-400">Deeper AI Analytics</h3>
+                            <p class="text-gray-300">Move beyond basic metrics to predictive analytics, suggesting the best content and times to post for maximum impact.</p>
+                        </div>
+                        <div class="bg-gray-700 p-6 rounded-xl border border-gray-600">
+                             <h3 class="text-xl font-semibold mb-2 text-purple-400">Creator Hub</h3>
+                            <p class="text-gray-300">Become the central operating system for the creator economy, integrating monetization and collaboration tools.</p>
+                        </div>
+                    </div>
+                </div>
 
-                <!-- Slide 12: Q&A -->
-                <div class="slide fade-in flex-col items-center justify-center text-center">
-                    <h1 class="text-6xl md:text-8xl font-extrabold gradient-text mb-4">Thank You</h1>
-                    <p class="text-xl md:text-2xl text-gray-300">Q & A</p>
-                </div>
+                                <div class="slide fade-in flex-col items-center justify-center text-center">
+                    <h1 class="text-6xl md:text-8xl font-extrabold gradient-text mb-4">Thank You</h1>
+                    <p class="text-xl md:text-2xl text-gray-300">Q & A</p>
+                </div>
 
-            </div>
+            </div>
 
-            <!-- Navigation -->
-            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-4">
-                <button id="prevBtn" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-full transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-                </button>
-                <button id="nextBtn" class="bg-gradient-to-r from-purple-500 to-pink-500 hover:opacity-90 text-white font-bold py-2 px-4 rounded-full transition-opacity">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-                </button>
-            </div>
-        </div>
-    </div>
+                        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-4">
+                <button id="prevBtn" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-full transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                </button>
+                <button id="nextBtn" class="bg-gradient-to-r from-purple-500 to-pink-500 hover:opacity-90 text-white font-bold py-2 px-4 rounded-full transition-opacity">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                </button>
+            </div>
+        </div>
+    </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const slides = document.querySelectorAll('.slide');
-            const prevBtn = document.getElementById('prevBtn');
-            const nextBtn = document.getElementById('nextBtn');
-            const progressBar = document.getElementById('progressBar');
-            let currentSlide = 0;
+    <script>
+        // --- CHATBASE SETUP ---
+        // NOTE: We use a placeholder here because this is a static pitch deck, not the main app.
+        const CHATBOT_ID = 'GUEST_PITCH_ID'; 
+        const API_URL = 'https://www.infleuince.com';
+        
+        window.embeddedChatbotConfig = {
+            chatbotId: CHATBOT_ID,
+            domain: "www.chatbase.co"
+        };
+        
+        // We only need to load the Chatbase script, but since this deck doesn't have an authentication context,
+        // we skip the complex JWT logic and rely on the Chatbase embed to run in guest mode.
+        
+        // Inject the Chatbase script (assuming embed.min.js is in the same directory as this index.html)
+        const chatbaseScript = document.createElement('script');
+        chatbaseScript.src = 'https://www.chatbase.co/embed.min.js';
+        chatbaseScript.setAttribute('chatbotId', CHATBOT_ID);
+        chatbaseScript.setAttribute('domain', 'www.chatbase.co');
+        chatbaseScript.defer = true;
+        
+        // Append script to body
+        document.body.appendChild(chatbaseScript);
 
-            function showSlide(index) {
-                slides.forEach((slide, i) => {
-                    slide.classList.remove('active');
-                    if (i === index) {
-                        slide.classList.add('active', 'fade-in');
-                    }
-                });
-                updateControls();
-                updateProgressBar();
-            }
 
-            function updateControls() {
-                prevBtn.disabled = currentSlide === 0;
-                nextBtn.disabled = currentSlide === slides.length - 1;
-                 if (currentSlide === slides.length - 1) {
-                    nextBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>`;
-                } else {
-                    nextBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>`;
-                }
-            }
-            
-            function updateProgressBar() {
-                const progress = ((currentSlide + 1) / slides.length) * 100;
-                progressBar.style.width = `${progress}%`;
-            }
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const progressBar = document.getElementById('progressBar');
+            let currentSlide = 0;
 
-            prevBtn.addEventListener('click', () => {
-                if (currentSlide > 0) {
-                    currentSlide--;
-                    showSlide(currentSlide);
-                }
-            });
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.remove('active');
+                    if (i === index) {
+                        slide.classList.add('active', 'fade-in');
+                    }
+                });
+                updateControls();
+                updateProgressBar();
+            }
 
-            nextBtn.addEventListener('click', () => {
-                if (currentSlide < slides.length - 1) {
-                    currentSlide++;
-                    showSlide(currentSlide);
-                }
-            });
-            
-            showSlide(currentSlide);
-            
-            // Chart.js instances
-            const marketCtx = document.getElementById('marketChart');
-            if(marketCtx) {
-                new Chart(marketCtx, {
-                    type: 'bar',
-                    data: {
-                        labels: ['Current', '2032 (Projected)'],
-                        datasets: [{
-                            label: 'Market Size (in Billions USD)',
-                            data: [27, 124],
-                            backgroundColor: ['rgba(168, 85, 247, 0.6)', 'rgba(236, 72, 153, 0.6)'],
-                            borderColor: ['rgba(168, 85, 247, 1)', 'rgba(236, 72, 153, 1)'],
-                            borderWidth: 1
-                        }]
-                    },
-                    options: {
-                        responsive: true, maintainAspectRatio: false,
-                        plugins: { legend: { display: false }, title: { display: true, text: 'Market Growth Projection', color: '#D1D5DB' }},
-                        scales: { y: { beginAtZero: true, ticks: { color: '#9CA3AF' }, grid: { color: 'rgba(255,255,255,0.1)' }}, x: { ticks: { color: '#9CA3AF' }, grid: { color: 'rgba(255,255,255,0.1)' }}}
-                    }
-                });
-            }
+            function updateControls() {
+                prevBtn.disabled = currentSlide === 0;
+                nextBtn.disabled = currentSlide === slides.length - 1;
+                 if (currentSlide === slides.length - 1) {
+                    nextBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>`;
+                } else {
+                    nextBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>`;
+                }
+            }
+            
+            function updateProgressBar() {
+                const progress = ((currentSlide + 1) / slides.length) * 100;
+                progressBar.style.width = `${progress}%`;
+            }
 
-            const askCtx = document.getElementById('askChart');
-            if(askCtx) {
-                new Chart(askCtx, {
-                    type: 'doughnut',
-                    data: {
-                        labels: ['Product Development', 'Marketing & Sales', 'Operational Costs', 'Legal & Compliance'],
-                        datasets: [{
-                            label: 'Use of Funds',
-                            data: [40, 35, 15, 10],
-                            backgroundColor: ['rgba(168, 85, 247, 0.8)', 'rgba(236, 72, 153, 0.8)', 'rgba(139, 92, 246, 0.7)', 'rgba(219, 39, 119, 0.7)'],
-                            borderColor: '#4B5563', borderWidth: 2, hoverOffset: 4
-                        }]
-                    },
-                    options: {
-                        responsive: true, maintainAspectRatio: false,
-                        plugins: { legend: { position: 'bottom', labels: { color: '#D1D5DB', boxWidth: 15, padding: 15 }}, title: { display: true, text: 'Use of $50,000 Seed Funding', color: '#D1D5DB', padding: { top: 10, bottom: 20 }}}
-                    }
-                });
-            }
+            prevBtn.addEventListener('click', () => {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    showSlide(currentSlide);
+                }
+            });
 
-            const growthCtx = document.getElementById('growthChart');
-            if(growthCtx) {
-                new Chart(growthCtx, {
-                    type: 'line',
-                    data: {
-                        labels: ['M1', 'M2', 'M3', 'M4', 'M5', 'M6', 'M7', 'M8', 'M9', 'M10', 'M11', 'M12'],
-                        datasets: [{
-                            label: 'Projected Pro Subscribers',
-                            data: [10, 20, 35, 55, 80, 110, 150, 200, 250, 290, 320, 345],
-                            fill: true,
-                            backgroundColor: 'rgba(168, 85, 247, 0.2)',
-                            borderColor: 'rgba(168, 85, 247, 1)',
-                            tension: 0.4
-                        }]
-                    },
-                    options: {
-                        responsive: true, maintainAspectRatio: false,
-                        plugins: { legend: { display: false }, title: { display: true, text: 'Projected Subscriber Growth to $10k MRR', color: '#D1D5DB' }},
-                        scales: { y: { beginAtZero: true, ticks: { color: '#9CA3AF' }, grid: { color: 'rgba(255,255,255,0.1)' }}, x: { ticks: { color: '#9CA3AF' }, grid: { color: 'rgba(255,255,255,0.1)' }}}
-                    }
-                });
-            }
-        });
-    </script>
+            nextBtn.addEventListener('click', () => {
+                if (currentSlide < slides.length - 1) {
+                    currentSlide++;
+                    showSlide(currentSlide);
+                }
+            });
+            
+            showSlide(currentSlide);
+            
+            // Chart.js instances
+            const marketCtx = document.getElementById('marketChart');
+            if(marketCtx) {
+                new Chart(marketCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Current', '2032 (Projected)'],
+                        datasets: [{
+                            label: 'Market Size (in Billions USD)',
+                            data: [27, 124],
+                            backgroundColor: ['rgba(168, 85, 247, 0.6)', 'rgba(236, 72, 153, 0.6)'],
+                            borderColor: ['rgba(168, 85, 247, 1)', 'rgba(236, 72, 153, 1)'],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true, maintainAspectRatio: false,
+                        plugins: { legend: { display: false }, title: { display: true, text: 'Market Growth Projection', color: '#D1D5DB' }},
+                        scales: { y: { beginAtZero: true, ticks: { color: '#9CA3AF' }, grid: { color: 'rgba(255,255,255,0.1)' }}, x: { ticks: { color: '#9CA3AF' }, grid: { color: 'rgba(255,255,255,0.1)' }}}
+                    }
+                });
+            }
+
+            const askCtx = document.getElementById('askChart');
+            if(askCtx) {
+                new Chart(askCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Product Development', 'Marketing & Sales', 'Operational Costs', 'Legal & Compliance'],
+                        datasets: [{
+                            label: 'Use of Funds',
+                            data: [40, 35, 15, 10],
+                            backgroundColor: ['rgba(168, 85, 247, 0.8)', 'rgba(236, 72, 153, 0.8)', 'rgba(139, 92, 246, 0.7)', 'rgba(219, 39, 119, 0.7)'],
+                            borderColor: '#4B5563', borderWidth: 2, hoverOffset: 4
+                        }]
+                    },
+                    options: {
+                        responsive: true, maintainAspectRatio: false,
+                        plugins: { legend: { position: 'bottom', labels: { color: '#D1D5DB', boxWidth: 15, padding: 15 }}, title: { display: true, text: 'Use of $50,000 Seed Funding', color: '#D1D5DB', padding: { top: 10, bottom: 20 }}}
+                    }
+                });
+            }
+
+            const growthCtx = document.getElementById('growthChart');
+            if(growthCtx) {
+                new Chart(growthCtx, {
+                    type: 'line',
+                    data: {
+                        labels: ['M1', 'M2', 'M3', 'M4', 'M5', 'M6', 'M7', 'M8', 'M9', 'M10', 'M11', 'M12'],
+                        datasets: [{
+                            label: 'Projected Pro Subscribers',
+                            data: [10, 20, 35, 55, 80, 110, 150, 200, 250, 290, 320, 345],
+                            fill: true,
+                            backgroundColor: 'rgba(168, 85, 247, 0.2)',
+                            borderColor: 'rgba(168, 85, 247, 1)',
+                            tension: 0.4
+                        }]
+                    },
+                    options: {
+                        responsive: true, maintainAspectRatio: false,
+                        plugins: { legend: { display: false }, title: { display: true, text: 'Projected Subscriber Growth to $10k MRR', color: '#D1D5DB' }},
+                        scales: { y: { beginAtZero: true, ticks: { color: '#9CA3AF' }, grid: { color: 'rgba(255,255,255,0.1)' }}, x: { ticks: { color: '#9CA3AF' }, grid: { color: 'rgba(255,255,255,0.1)' }}}
+                    }
+                });
+            }
+            
+            // ⭐ FINAL STEP: Load the Chatbase AI Assistant on the pitch deck
+            const CHATBOT_ID = 'YOUR_STATIC_PITCH_ID'; // Replace with a unique ID for the pitch deck bot
+            
+            window.embeddedChatbotConfig = {
+                chatbotId: CHATBOT_ID,
+                domain: "www.chatbase.co"
+            };
+            
+            const chatbaseScript = document.createElement('script');
+            chatbaseScript.src = 'https://www.chatbase.co/embed.min.js';
+            chatbaseScript.setAttribute('chatbotId', CHATBOT_ID);
+            chatbaseScript.setAttribute('domain', 'www.chatbase.co');
+            chatbaseScript.defer = true;
+            document.body.appendChild(chatbaseScript);
+        });
+    </script>
 </body>
 </html>
+
