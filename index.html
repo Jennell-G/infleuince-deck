@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Infleuince: Investor Pitch Deck</title>
-
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,33 +15,405 @@
       font-family: 'Inter', sans-serif;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      background:
-        radial-gradient(1200px 700px at 20% 10%, rgba(139, 92, 246, 0.18), transparent 55%),
-        radial-gradient(900px 600px at 80% 20%, rgba(236, 72, 153, 0.14), transparent 55%),
-        radial-gradient(1000px 700px at 40% 90%, rgba(59, 130, 246, 0.10), transparent 60%),
-        #0b1220;
     }
-
     .slide { display: none; min-height: 70vh; }
     .slide.active { display: flex; }
-
-    .fade-in { animation: fadeIn 0.7s ease-out; }
+    .fade-in { animation: fadeIn 0.8s ease-in-out; }
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(14px); }
+      from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
     .gradient-text {
       background: linear-gradient(to right, #8B5CF6, #EC4899);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-
-    .soft-glow {
-      box-shadow:
-        0 0 0 1px rgba(255,255,255,0.06),
-        0 12px 40px rgba(0,0,0,0.45);
+    .mockup-window { animation: float 4s ease-in-out infinite; }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
     }
+  </style>
+</head>
+
+<body class="bg-gray-900 text-white flex flex-col items-center justify-center min-h-screen p-4">
+
+  <div class="w-full max-w-5xl mx-auto bg-gray-800 border border-gray-700 rounded-2xl shadow-2xl overflow-hidden">
+
+    <div class="w-full bg-gray-700 h-2">
+      <div id="progressBar" class="bg-gradient-to-r from-purple-500 to-pink-500 h-2 transition-all duration-300" style="width: 10%;"></div>
+    </div>
+
+    <div class="p-8 md:p-12 relative">
+      <div id="slidesContainer">
+
+        <div class="slide active fade-in flex-col items-center justify-center text-center">
+          <h1 class="text-6xl md:text-8xl font-extrabold gradient-text mb-4">Infleuince</h1>
+          <p class="text-xl md:text-2xl text-gray-300">The Intelligent Social Media Studio</p>
+          <p class="mt-8 text-gray-400">An Investor Presentation</p>
+        </div>
+
+        <div class="slide fade-in flex-col lg:flex-row items-center justify-between">
+          <div class="lg:w-1/2 mb-8 lg:mb-0">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">The Opportunity</h2>
+            <p class="text-lg text-gray-300 mb-6">
+              The social media management market is experiencing explosive growth. We are positioned to capture a
+              significant share by addressing a critical market gap.
+            </p>
+            <div class="flex space-x-6 text-center">
+              <div>
+                <p class="text-4xl font-bold gradient-text">$27B</p>
+                <p class="text-gray-400">Current Market Size</p>
+              </div>
+              <div>
+                <p class="text-4xl font-bold gradient-text">$124B</p>
+                <p class="text-gray-400">Projected by 2032</p>
+              </div>
+            </div>
+            <p class="text-xs text-gray-500 mt-4">*Source: Fortune Business Insights</p>
+          </div>
+          <div class="lg:w-1/2 flex items-center justify-center h-full">
+            <canvas id="marketChart" class="max-h-64"></canvas>
+          </div>
+        </div>
+
+        <div class="slide fade-in flex-col items-center justify-center text-center">
+          <h2 class="text-4xl md:text-5xl font-bold mb-8">Why Now? The <span class="gradient-text">Perfect Storm</span></h2>
+          <div class="grid md:grid-cols-3 gap-8 w-full">
+            <div class="bg-gray-700 p-6 rounded-xl border border-gray-600">
+              <h3 class="text-xl font-semibold mb-2 text-purple-400">API Disruption</h3>
+              <p class="text-gray-300">Platform/API changes open space for agile tools to outmaneuver incumbents.</p>
+            </div>
+            <div class="bg-gray-700 p-6 rounded-xl border border-gray-600">
+              <h3 class="text-xl font-semibold mb-2 text-pink-400">AI Maturity</h3>
+              <p class="text-gray-300">Generative AI can now deliver content-aware automation, not just templates.</p>
+            </div>
+            <div class="bg-gray-700 p-6 rounded-xl border border-gray-600">
+              <h3 class="text-xl font-semibold mb-2 text-purple-400">Creator Economy Boom</h3>
+              <p class="text-gray-300">Creators & SMB teams need efficient, intelligent tools to scale output.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide fade-in flex-col items-center justify-center text-center">
+          <h2 class="text-4xl md:text-5xl font-bold mb-8">A Market Divided, A Problem Unsolved</h2>
+          <div class="grid md:grid-cols-3 gap-8 w-full">
+            <div class="bg-gray-700 p-6 rounded-xl border border-gray-600">
+              <h3 class="text-xl font-semibold mb-2">Too Basic</h3>
+              <p class="text-gray-400">Tools like Buffer & Later are affordable but lack the AI power and workflow depth needed to scale.</p>
+            </div>
+            <div class="bg-gradient-to-br from-purple-600 to-pink-600 p-6 rounded-xl border border-purple-500 shadow-lg">
+              <h3 class="text-2xl font-bold mb-2 text-white">The "Missing Middle"</h3>
+              <p class="text-purple-100">Professional creators & SMB teams need power without enterprise complexity or cost.</p>
+            </div>
+            <div class="bg-gray-700 p-6 rounded-xl border border-gray-600">
+              <h3 class="text-xl font-semibold mb-2">Too Complex</h3>
+              <p class="text-gray-400">Enterprise tools like Hootsuite are powerful but too expensive and complicated for small teams.</p>
+            </div>
+          </div>
+          <p class="mt-8 text-lg text-pink-400 font-semibold">The common thread? Fragmented workflows and costly friction.</p>
+        </div>
+
+        <div class="slide fade-in flex-col items-center justify-center">
+          <h2 class="text-4xl md:text-5xl font-bold mb-8 text-center">Competitive Landscape</h2>
+          <div class="w-full h-96 bg-gray-700/50 rounded-lg p-4 relative border border-gray-600">
+            <div class="absolute bottom-1/2 left-0 w-full h-px bg-gray-500"></div>
+            <div class="absolute top-0 left-1/2 w-px h-full bg-gray-500"></div>
+
+            <span class="absolute top-2 left-1/2 -translate-x-1/2 text-gray-400 text-sm">More AI Power</span>
+            <span class="absolute bottom-2 left-1/2 -translate-x-1/2 text-gray-400 text-sm">Less AI Power</span>
+            <span class="absolute top-1/2 -translate-y-1/2 left-2 text-gray-400 text-sm transform -rotate-90 origin-left">Hard to Use</span>
+            <span class="absolute top-1/2 -translate-y-1/2 right-2 text-gray-400 text-sm transform rotate-90 origin-right">Easy to Use</span>
+
+            <div class="absolute bottom-4 right-4 text-center">
+              <div class="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center border-2 border-red-500">
+                <span class="font-bold text-red-300">Buffer</span>
+              </div>
+            </div>
+
+            <div class="absolute top-4 left-4 text-center">
+              <div class="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center border-2 border-blue-500">
+                <span class="font-bold text-blue-300">Hootsuite</span>
+              </div>
+            </div>
+
+            <div class="absolute top-8 right-8 text-center">
+              <div class="w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center border-4 border-purple-400 shadow-2xl">
+                <span class="font-extrabold text-2xl text-white">Infleuince</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide fade-in flex-col items-center justify-center">
+          <h2 class="text-4xl md:text-5xl font-bold mb-2 text-center">Our Solution: <span class="gradient-text">Infleuince</span></h2>
+          <p class="text-center text-gray-300 mb-8 max-w-3xl">
+            An intelligent content partner, not just another scheduler. The fastest path from idea to viral-ready content.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-8 w-full">
+            <div class="bg-gray-700 p-8 rounded-xl border border-gray-600 transform hover:scale-105 transition-transform duration-300">
+              <h3 class="text-2xl font-bold mb-3">AI Captioning + Content-Aware Captions</h3>
+              <p class="text-gray-300 mb-4">
+                Infleuince generates captions based on analysis of the content you created (video or photos), not generic templates.
+                Auto-captioning flows directly into preview and publishing.
+              </p>
+              <p class="text-gray-400 text-sm">Includes enhancement workflows + creator-first UX.</p>
+            </div>
+
+            <div class="bg-gray-700 p-8 rounded-xl border border-gray-600 transform hover:scale-105 transition-transform duration-300">
+              <h3 class="text-2xl font-bold mb-3">Create → Preview → Publish → Analyze (All-in-One)</h3>
+              <p class="text-gray-300">
+                Create or upload content, generate captions, preview your full feed presence before publishing, publish with one click,
+                then measure performance with analytics — all from one platform.
+              </p>
+              <p class="text-gray-400 text-sm mt-4">Eliminates fragmented creator tools.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide fade-in flex-col lg:flex-row items-center justify-between">
+          <div class="lg:w-1/2 mb-8 lg:mb-0">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">The Ask</h2>
+            <p class="text-lg text-gray-300 mb-6">
+              We are seeking <span class="text-pink-400 font-bold">$250,000</span> in <span class="text-purple-300 font-semibold">pre-seed</span>
+              funding to accelerate validation, product refinement, IP protection, and go-to-market execution over the next 12–18 months.
+            </p>
+
+            <ul class="space-y-2 text-gray-300">
+              <li><span class="font-bold text-purple-400">40%</span> — Product Development & AI Infrastructure <span class="text-sm text-gray-500">(≈ $100,000)</span></li>
+              <li><span class="font-bold text-pink-400">35%</span> — Marketing & Sales <span class="text-sm text-gray-500">(≈ $87,500)</span></li>
+              <li><span class="font-bold text-purple-400">15%</span> — Operational Costs <span class="text-sm text-gray-500">(≈ $37,500)</span></li>
+              <li><span class="font-bold text-pink-400">10%</span> — Legal, IP & Licensing <span class="text-sm text-gray-500">(≈ $25,000)</span></li>
+            </ul>
+          </div>
+
+          <div class="lg:w-1/2 flex items-center justify-center">
+            <div class="w-full max-w-sm h-72">
+              <canvas id="askChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- ✅ NEW TEAM SLIDE (adds founder photo reference) -->
+        <div class="slide fade-in flex-col items-center justify-center">
+          <h2 class="text-4xl md:text-5xl font-bold mb-8 text-center">Team</h2>
+
+          <div class="w-full bg-gray-700/40 border border-gray-600 rounded-2xl p-8 flex flex-col md:flex-row items-center gap-8">
+            <!-- Photo -->
+            <div class="shrink-0">
+              <img
+                src="assets/images/Infleuince_Founder_Headshot.png"
+                alt="Jennell Greer — Founder & CEO"
+                class="w-40 h-40 rounded-full object-cover border-4 border-purple-500 shadow-xl"
+                onerror="this.style.display='none'; document.getElementById('headshotFallback').style.display='flex';"
+              />
+              <!-- Fallback if image missing -->
+              <div
+                id="headshotFallback"
+                class="w-40 h-40 rounded-full hidden items-center justify-center border-4 border-purple-500 shadow-xl bg-gradient-to-br from-purple-500/30 to-pink-500/20"
+              >
+                <span class="text-3xl font-extrabold text-white">JG</span>
+              </div>
+            </div>
+
+            <!-- Bio -->
+            <div class="text-left">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="inline-block w-10 h-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500"></span>
+                <h3 class="text-2xl font-bold">Jennell Greer — Founder & CEO</h3>
+              </div>
+
+              <p class="text-gray-300 leading-relaxed">
+                Former content creator (2019–2020) with firsthand experience navigating platform algorithms and the evolving creator landscape.
+                Supported a CEO’s social presence in the NICU nursing space (CEU-Espresso, 2023). Background across analytics, product, and AI-driven systems.
+              </p>
+
+              <p class="text-gray-400 mt-4 text-sm">
+                Founder-led today. Hiring selectively as validation and revenue unlocks growth.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ✅ UPDATED THANK YOU SLIDE (adds contact + demo status) -->
+        <div class="slide fade-in flex-col items-center justify-center text-center">
+          <h1 class="text-6xl md:text-8xl font-extrabold gradient-text mb-4">Thank You</h1>
+          <p class="text-xl md:text-2xl text-gray-300 mb-8">Q & A</p>
+
+          <div class="w-full max-w-2xl bg-gray-700/40 border border-gray-600 rounded-2xl p-6 text-left">
+            <h3 class="text-lg font-semibold text-white mb-4">Contact</h3>
+
+            <div class="space-y-3 text-gray-300">
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+                <span class="text-gray-400">Email</span>
+                <span class="font-medium">business@infleuince.com</span>
+              </div>
+
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+                <span class="text-gray-400">LinkedIn</span>
+                <a
+                  href="https://www.linkedin.com/in/jennell-g-60b6b8237/"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="font-medium text-pink-300 hover:text-pink-200 underline underline-offset-4"
+                >
+                  linkedin.com/in/jennell-g-60b6b8237/
+                </a>
+              </div>
+
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+                <span class="text-gray-400">Demo</span>
+                <span class="font-medium">Coming Soon</span>
+              </div>
+            </div>
+
+            <p class="text-xs text-gray-400 mt-5">
+              Note: Add the headshot image at <span class="text-gray-300">assets/images/Infleuince_Founder_Headshot.png</span>.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-4">
+        <button id="prevBtn" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-full transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m15 18-6-6 6-6"/>
+          </svg>
+        </button>
+        <button id="nextBtn" class="bg-gradient-to-r from-purple-500 to-pink-500 hover:opacity-90 text-white font-bold py-2 px-4 rounded-full transition-opacity">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m9 18 6-6-6-6"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const slides = document.querySelectorAll('.slide');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const progressBar = document.getElementById('progressBar');
+      let currentSlide = 0;
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.remove('active');
+          slide.classList.remove('fade-in');
+          if (i === index) {
+            slide.classList.add('active');
+            setTimeout(() => slide.classList.add('fade-in'), 10);
+          }
+        });
+        currentSlide = index;
+        updateControls();
+        updateProgressBar();
+      }
+
+      function updateControls() {
+        prevBtn.disabled = currentSlide === 0;
+        nextBtn.disabled = currentSlide === slides.length - 1;
+
+        if (currentSlide === slides.length - 1) {
+          nextBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>`;
+        } else {
+          nextBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>`;
+        }
+      }
+
+      function updateProgressBar() {
+        const progress = ((currentSlide + 1) / slides.length) * 100;
+        progressBar.style.width = `${progress}%`;
+      }
+
+      prevBtn.addEventListener('click', () => {
+        if (currentSlide > 0) showSlide(currentSlide - 1);
+      });
+
+      nextBtn.addEventListener('click', () => {
+        if (currentSlide < slides.length - 1) showSlide(currentSlide + 1);
+      });
+
+      showSlide(currentSlide);
+
+      // Market Growth Chart (Bar)
+      const marketCtx = document.getElementById('marketChart');
+      if (marketCtx) {
+        new Chart(marketCtx, {
+          type: 'bar',
+          data: {
+            labels: ['Current', '2032 (Projected)'],
+            datasets: [{
+              label: 'Market Size (in Billions USD)',
+              data: [27, 124],
+              backgroundColor: ['rgba(168, 85, 247, 0.6)', 'rgba(236, 72, 153, 0.6)'],
+              borderColor: ['rgba(168, 85, 247, 1)', 'rgba(236, 72, 153, 1)'],
+              borderWidth: 1
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false },
+              title: { display: true, text: 'Market Growth Projection', color: '#D1D5DB' }
+            },
+            scales: {
+              y: { beginAtZero: true, ticks: { color: '#9CA3AF' }, grid: { color: 'rgba(255,255,255,0.1)' } },
+              x: { ticks: { color: '#9CA3AF' }, grid: { color: 'rgba(255,255,255,0.1)' } }
+            }
+          }
+        });
+      }
+
+      // Use of Funds Chart (Doughnut) — UPDATED TO $250K
+      const askCtx = document.getElementById('askChart');
+      if (askCtx) {
+        new Chart(askCtx, {
+          type: 'doughnut',
+          data: {
+            labels: ['Product & AI Infrastructure', 'Marketing & Sales', 'Operational Costs', 'Legal, IP & Licensing'],
+            datasets: [{
+              label: 'Use of Funds',
+              data: [40, 35, 15, 10],
+              backgroundColor: [
+                'rgba(168, 85, 247, 0.85)',
+                'rgba(236, 72, 153, 0.85)',
+                'rgba(139, 92, 246, 0.7)',
+                'rgba(219, 39, 119, 0.7)'
+              ],
+              borderColor: '#4B5563',
+              borderWidth: 2,
+              hoverOffset: 4
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { position: 'bottom', labels: { color: '#D1D5DB', boxWidth: 15, padding: 15 } },
+              title: { display: true, text: 'Use of $250,000 Pre-Seed Funding', color: '#D1D5DB', padding: { top: 10, bottom: 20 } }
+            }
+          }
+        });
+      }
+
+      // Chatbase embed (unchanged)
+      const CHATBOT_ID = 'YOUR_STATIC_PITCH_ID'; // replace with your real Chatbase bot id
+      window.embeddedChatbotConfig = { chatbotId: CHATBOT_ID, domain: "www.chatbase.co" };
+      const chatbaseScript = document.createElement('script');
+      chatbaseScript.src = 'https://www.chatbase.co/embed.min.js';
+      chatbaseScript.setAttribute('chatbotId', CHATBOT_ID);
+      chatbaseScript.setAttribute('domain', 'www.chatbase.co');
+      chatbaseScript.defer = true;
+      document.body.appendChild(chatbaseScript);
+    });
+  </script>
+</body>
+</html>
 
     .pulse-dot {
       animation: pulse 2.4s ease-in-out infinite;
@@ -570,6 +941,7 @@
   </script>
 </body>
 </html>
+
 
 
 
