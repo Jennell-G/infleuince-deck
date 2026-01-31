@@ -47,12 +47,14 @@
     <div class="p-8 md:p-12 relative">
       <div id="slidesContainer">
 
+        <!-- 1) COVER -->
         <div class="slide active fade-in flex-col items-center justify-center text-center">
           <h1 class="text-6xl md:text-8xl font-extrabold gradient-text mb-4">Infleuince</h1>
           <p class="text-xl md:text-2xl text-gray-300">The Intelligent Social Media Studio</p>
           <p class="mt-8 text-gray-400">An Investor Presentation</p>
         </div>
 
+        <!-- 2) OPPORTUNITY -->
         <div class="slide fade-in flex-col lg:flex-row items-center justify-between">
           <div class="lg:w-1/2 mb-8 lg:mb-0">
             <h2 class="text-4xl md:text-5xl font-bold mb-4">The Opportunity</h2>
@@ -77,6 +79,7 @@
           </div>
         </div>
 
+        <!-- 3) WHY NOW -->
         <div class="slide fade-in flex-col items-center justify-center text-center">
           <h2 class="text-4xl md:text-5xl font-bold mb-8">Why Now? The <span class="gradient-text">Perfect Storm</span></h2>
           <div class="grid md:grid-cols-3 gap-8 w-full">
@@ -95,6 +98,7 @@
           </div>
         </div>
 
+        <!-- 4) PROBLEM -->
         <div class="slide fade-in flex-col items-center justify-center text-center">
           <h2 class="text-4xl md:text-5xl font-bold mb-8">A Market Divided, A Problem Unsolved</h2>
           <div class="grid md:grid-cols-3 gap-8 w-full">
@@ -114,6 +118,49 @@
           <p class="mt-8 text-lg text-pink-400 font-semibold">The common thread? Fragmented workflows and costly friction.</p>
         </div>
 
+        <!-- 5) TARGET CUSTOMER (NEW) -->
+        <div class="slide fade-in flex-col items-center justify-center text-center">
+          <h2 class="text-4xl md:text-5xl font-bold mb-8">Target Customer</h2>
+
+          <div class="grid md:grid-cols-3 gap-8 w-full">
+            <div class="bg-gray-700 p-6 rounded-xl border border-gray-600">
+              <h3 class="text-xl font-semibold mb-3 text-purple-400">
+                Professional Creators & Solopreneurs
+              </h3>
+              <p class="text-gray-300">
+                Individuals monetizing content who need fast, content-aware creation,
+                captioning, and publishing without managing multiple tools.
+              </p>
+            </div>
+
+            <div class="bg-gray-700 p-6 rounded-xl border border-gray-600">
+              <h3 class="text-xl font-semibold mb-3 text-pink-400">
+                Small Marketing Teams (2–10)
+              </h3>
+              <p class="text-gray-300">
+                Lean teams managing multiple platforms that need AI-powered workflows
+                without enterprise pricing or operational overhead.
+              </p>
+            </div>
+
+            <div class="bg-gray-700 p-6 rounded-xl border border-gray-600">
+              <h3 class="text-xl font-semibold mb-3 text-purple-400">
+                Founder-Led Brands & SMBs
+              </h3>
+              <p class="text-gray-300">
+                Businesses building a social presence in-house who need professional
+                output without hiring agencies or full-time creators.
+              </p>
+            </div>
+          </div>
+
+          <p class="mt-8 text-gray-400 text-sm max-w-3xl">
+            Infleuince is built for customers who have outgrown basic schedulers
+            but are underserved by complex enterprise tools.
+          </p>
+        </div>
+
+        <!-- 6) COMPETITIVE LANDSCAPE -->
         <div class="slide fade-in flex-col items-center justify-center">
           <h2 class="text-4xl md:text-5xl font-bold mb-8 text-center">Competitive Landscape</h2>
           <div class="w-full h-96 bg-gray-700/50 rounded-lg p-4 relative border border-gray-600">
@@ -145,6 +192,7 @@
           </div>
         </div>
 
+        <!-- 7) SOLUTION -->
         <div class="slide fade-in flex-col items-center justify-center">
           <h2 class="text-4xl md:text-5xl font-bold mb-2 text-center">Our Solution: <span class="gradient-text">Infleuince</span></h2>
           <p class="text-center text-gray-300 mb-8 max-w-3xl">
@@ -172,6 +220,7 @@
           </div>
         </div>
 
+        <!-- 8) ASK -->
         <div class="slide fade-in flex-col lg:flex-row items-center justify-between">
           <div class="lg:w-1/2 mb-8 lg:mb-0">
             <h2 class="text-4xl md:text-5xl font-bold mb-4">The Ask</h2>
@@ -195,7 +244,7 @@
           </div>
         </div>
 
-        <!-- TEAM SLIDE -->
+        <!-- 9) TEAM -->
         <div class="slide fade-in flex-col items-center justify-center">
           <h2 class="text-4xl md:text-5xl font-bold mb-8 text-center">Team</h2>
 
@@ -233,7 +282,7 @@
           </div>
         </div>
 
-        <!-- THANK YOU / CONTACT SLIDE -->
+        <!-- 10) THANK YOU / CONTACT -->
         <div class="slide fade-in flex-col items-center justify-center text-center">
           <h1 class="text-6xl md:text-8xl font-extrabold gradient-text mb-4">Thank You</h1>
           <p class="text-xl md:text-2xl text-gray-300 mb-8">Q & A</p>
@@ -269,6 +318,7 @@
 
       </div>
 
+      <!-- NAV BUTTONS -->
       <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-4">
         <button id="prevBtn" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-full transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -362,7 +412,7 @@
         });
       }
 
-      // Use of Funds Chart (Doughnut) — UPDATED TO $250K
+      // Use of Funds Chart (Doughnut)
       const askCtx = document.getElementById('askChart');
       if (askCtx) {
         new Chart(askCtx, {
@@ -394,7 +444,7 @@
         });
       }
 
-      // Chatbase embed (unchanged)
+      // Chatbase embed (optional)
       const CHATBOT_ID = 'YOUR_STATIC_PITCH_ID'; // replace with your real Chatbase bot id
       window.embeddedChatbotConfig = { chatbotId: CHATBOT_ID, domain: "www.chatbase.co" };
       const chatbaseScript = document.createElement('script');
@@ -407,6 +457,8 @@
   </script>
 </body>
 </html>
+
+
 
 
 
